@@ -3,7 +3,7 @@ package model;
 public class Aeropuertos {
 	
 	int id, anio_inauguracion, capacidad, id_direccion;
-	String varchar;
+	String nombre;
 	
 	public Aeropuertos(int id, int anio_inauguracion, int capacidad, int id_direccion, String varchar) {
 
@@ -11,7 +11,7 @@ public class Aeropuertos {
 		this.anio_inauguracion = anio_inauguracion;
 		this.capacidad = capacidad;
 		this.id_direccion = id_direccion;
-		this.varchar = varchar;
+		this.nombre = varchar;
 	}
 
 	
@@ -48,10 +48,10 @@ public class Aeropuertos {
 	}
 
 	public String getVarchar() {
-		return varchar;
+		return nombre;
 	}
 
 	public void setVarchar(String varchar) {
-		this.varchar = varchar;
+		this.nombre = varchar;
 	}
 }

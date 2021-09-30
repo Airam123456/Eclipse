@@ -2,7 +2,7 @@ package model;
 
 public class AeropuertosPrivados {
 	
-	int id_aeropuerto, numero_socios;
+	private int id_aeropuerto, numero_socios;
 	
 	public AeropuertosPrivados(int id_aeropuerto, int numero_socios) {
 		

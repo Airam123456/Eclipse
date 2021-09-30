@@ -1,11 +1,11 @@
-package model;
+package ej5.model;
 
-public class Usuarios {
+public class Usuario {
 
 	private String usuario;
 	private String password;
 	
-	public Usuarios(String usuario, String password) {
+	public Usuario(String usuario, String password) {
 		super();
 		this.usuario = usuario;
 		this.password = password;
@@ -26,5 +26,6 @@ public class Usuarios {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 	
 }

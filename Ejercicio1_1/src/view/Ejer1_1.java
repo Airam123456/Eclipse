@@ -61,8 +61,8 @@ public class Ejer1_1 extends JFrame {
 		setBounds(100, 100, 521, 534);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] {40, 112, 104, 122, 154, 30, 0};
-		gridBagLayout.rowHeights = new int[]{46, 47, 47, 77, 0, 58, 0, 0, 93, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 1.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowHeights = new int[]{46, 47, 47, 72, 0, 58, 0, 0, 93, 0};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 1.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		getContentPane().setLayout(gridBagLayout);
 		
@@ -126,6 +126,8 @@ public class Ejer1_1 extends JFrame {
 		getContentPane().add(comboBox, gbc_comboBox);
 		
 		JPanel panel = new JPanel();
+		FlowLayout flowLayout_1 = (FlowLayout) panel.getLayout();
+		flowLayout_1.setHgap(75);
 		panel.setBorder(new TitledBorder(null, "Sexo", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		GridBagConstraints gbc_panel = new GridBagConstraints();
 		gbc_panel.gridwidth = 4;
@@ -172,7 +174,7 @@ public class Ejer1_1 extends JFrame {
 		JList list = new JList();
 		scrollPane.setViewportView(list);
 		list.setModel(new AbstractListModel() {
-			String[] values = new String[] {"• Tenis", "• Fútbol", "• Baloncesto", "• Natación", "• Ciclismo", "• Otros"};
+			String[] values = new String[] {"Tenis", "• Fútbol", "• Baloncesto", "• Natación", "• Ciclismo", "• Otros"};
 			public int getSize() {
 				return values.length;
 			}

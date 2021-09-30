@@ -2,8 +2,8 @@ package model;
 
 public class Direcciones {
 	
-	int id, numero;
-	String pais, ciudad, calle;
+	private int id, numero;
+	private String pais, ciudad, calle;
 	
 	public Direcciones(int id, int numero, String pais, String ciudad, String calle) {
 
