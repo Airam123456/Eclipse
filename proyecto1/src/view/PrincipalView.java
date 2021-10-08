@@ -54,6 +54,7 @@ public class PrincipalView extends JFrame {
 		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
+		setResizable(false);
 		
 		JLabel lblOlimpiadas = new JLabel("Olimpiadas");
 		GridBagConstraints gbc_lblOlimpiadas = new GridBagConstraints();
@@ -61,6 +62,13 @@ public class PrincipalView extends JFrame {
 		gbc_lblOlimpiadas.gridx = 1;
 		gbc_lblOlimpiadas.gridy = 0;
 		contentPane.add(lblOlimpiadas, gbc_lblOlimpiadas);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 5;
+		gbc_lblNewLabel.gridy = 0;
+		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
 		JComboBox cBoxOlimpiadas = new JComboBox();
 		GridBagConstraints gbc_cBoxOlimpiadas = new GridBagConstraints();
