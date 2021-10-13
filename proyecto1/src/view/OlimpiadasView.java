@@ -63,7 +63,7 @@ public class OlimpiadasView extends JFrame {
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{30, 89, 97, 0, 94, 31, 0};
-		gbl_contentPane.rowHeights = new int[]{31, 0, 0, 32, 0, 35, 0};
+		gbl_contentPane.rowHeights = new int[]{31, 37, 0, 32, 0, 35, 0};
 		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 1.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
 		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
