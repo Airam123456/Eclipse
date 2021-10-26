@@ -10,52 +10,37 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane prefHeight="280.0" prefWidth="605.0"
-	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17"
-	fx:controller="controllers.Ejer_1Controller">
+<GridPane prefHeight="280.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ejer_1Controller">
 	<columnConstraints>
-		<ColumnConstraints maxWidth="214.0" minWidth="170.0"
-			prefWidth="207.0" />
-		<ColumnConstraints maxWidth="214.0" minWidth="30.0"
-			prefWidth="45.0" />
-		<ColumnConstraints maxWidth="554.0" minWidth="348.0"
-			prefWidth="364.0" />
+		<ColumnConstraints maxWidth="214.0" minWidth="170.0" prefWidth="207.0" />
+		<ColumnConstraints maxWidth="214.0" minWidth="30.0" prefWidth="45.0" />
+		<ColumnConstraints maxWidth="554.0" minWidth="348.0" prefWidth="364.0" />
 	</columnConstraints>
 	<rowConstraints>
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0"
-			prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
 	</rowConstraints>
 	<children>
-		<Button fx:id="btnAgregar" alignment="CENTER"
-			contentDisplay="CENTER" mnemonicParsing="false" onAction="#agregrar"
-			prefHeight="25.0" prefWidth="136.0" text="Agregar Persona"
-			textAlignment="CENTER" GridPane.halignment="CENTER"
-			GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-		<Label alignment="BOTTOM_LEFT" prefHeight="42.0"
-			prefWidth="200.0" text="Nombre">
+		<Button fx:id="btnAgregar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#agregrar" prefHeight="25.0" prefWidth="136.0" text="Agregar Persona" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+		<Label alignment="BOTTOM_LEFT" prefHeight="42.0" prefWidth="200.0" text="Nombre">
 			<GridPane.margin>
 				<Insets left="10.0" />
 			</GridPane.margin>
 		</Label>
-		<Label alignment="BOTTOM_LEFT" prefHeight="51.0"
-			prefWidth="250.0" text="Apellidos" GridPane.rowIndex="2" />
-		<Label alignment="BOTTOM_LEFT" prefHeight="38.0"
-			prefWidth="196.0" text="Edad" GridPane.rowIndex="4" />
+		<Label alignment="BOTTOM_LEFT" prefHeight="51.0" prefWidth="250.0" text="Apellidos" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+		<Label alignment="BOTTOM_LEFT" prefHeight="38.0" prefWidth="196.0" text="Edad" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
 		<TextField fx:id="txtNombre" GridPane.rowIndex="1">
 			<GridPane.margin>
 				<Insets left="10.0" />
@@ -71,8 +56,7 @@
 				<Insets left="10.0" />
 			</GridPane.margin>
 		</TextField>
-		<TableView fx:id="tablaDatos" prefHeight="333.0"
-			prefWidth="414.0" GridPane.columnIndex="2" GridPane.rowSpan="8">
+		<TableView fx:id="tablaDatos" prefHeight="333.0" prefWidth="414.0" GridPane.columnIndex="2" GridPane.rowSpan="8">
 			<columns>
 				<TableColumn prefWidth="122.0" text="NOMBRE" />
 				<TableColumn prefWidth="150.0" text="APELLIDOS" />
