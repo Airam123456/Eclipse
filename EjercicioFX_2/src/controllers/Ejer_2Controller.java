@@ -18,7 +18,7 @@ import javafx.event.ActionEvent;
 
 import javafx.scene.control.TableView;
 
-public class Ejer_1Controller implements Initializable{
+public class Ejer_2Controller implements Initializable{
 	@FXML
 	private Button btnAgregar;
 	@FXML
