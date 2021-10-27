@@ -10,21 +10,21 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane prefHeight="280.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ejer_1Controller">
+<GridPane prefHeight="325.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ejer_1Controller">
 	<columnConstraints>
 		<ColumnConstraints maxWidth="214.0" minWidth="170.0" prefWidth="207.0" />
 		<ColumnConstraints maxWidth="214.0" minWidth="30.0" prefWidth="45.0" />
 		<ColumnConstraints maxWidth="554.0" minWidth="348.0" prefWidth="364.0" />
 	</columnConstraints>
 	<rowConstraints>
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
-		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="35.0" vgrow="ALWAYS" />
 	</rowConstraints>
 	<children>
 		<Button fx:id="btnAgregar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#agregrar" prefHeight="25.0" prefWidth="136.0" text="Agregar Persona" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
@@ -56,11 +56,11 @@
 				<Insets left="10.0" />
 			</GridPane.margin>
 		</TextField>
-		<TableView fx:id="tablaDatos" prefHeight="333.0" prefWidth="414.0" GridPane.columnIndex="2" GridPane.rowSpan="8">
+		<TableView fx:id="tablaDatos" prefHeight="314.0" prefWidth="404.0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowSpan="8" GridPane.vgrow="ALWAYS">
 			<columns>
-				<TableColumn prefWidth="122.0" text="NOMBRE" />
-				<TableColumn prefWidth="150.0" text="APELLIDOS" />
-				<TableColumn prefWidth="75.0" text="EDAD" />
+				<TableColumn fx:id="columNombre" prefWidth="122.0" text="NOMBRE" />
+				<TableColumn fx:id="columApellido" prefWidth="150.0" text="APELLIDOS" />
+				<TableColumn fx:id="columEdad" prefWidth="75.0" text="EDAD" />
 			</columns>
 			<GridPane.margin>
 				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

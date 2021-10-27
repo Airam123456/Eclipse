@@ -17,7 +17,6 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
-			System.out.println("No se ve nada");
 			e.printStackTrace();
 		}
 	}
