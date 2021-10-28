@@ -12,6 +12,7 @@ import modelo.Persona;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import config.Messages;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -55,8 +56,8 @@ public class Ejer_2Controller implements Initializable{
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 					alert.initOwner(this.btnAgregar.getScene().getWindow());
 					alert.setHeaderText(null);
-					alert.setTitle("Error");
-					alert.setContentText("Edad fuera de rango");
+					alert.setTitle(Messages.getString("Ejer_2Controller.0")); //$NON-NLS-1$
+					alert.setContentText(Messages.getString("Ejer_2Controller.1")); //$NON-NLS-1$
 					alert.showAndWait();
 				}			
 				
@@ -65,8 +66,8 @@ public class Ejer_2Controller implements Initializable{
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 					alert.initOwner(this.btnAgregar.getScene().getWindow());
 					alert.setHeaderText(null);
-					alert.setTitle("Error");
-					alert.setContentText("El nombre no puede estar vacio");
+					alert.setTitle(Messages.getString("Ejer_2Controller.2")); //$NON-NLS-1$
+					alert.setContentText(Messages.getString("Ejer_2Controller.3")); //$NON-NLS-1$
 					alert.showAndWait();
 				}
 				
@@ -75,15 +76,15 @@ public class Ejer_2Controller implements Initializable{
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 					alert.initOwner(this.btnAgregar.getScene().getWindow());
 					alert.setHeaderText(null);
-					alert.setTitle("Error");
-					alert.setContentText("El apellido no puede estar vacio");
+					alert.setTitle(Messages.getString("Ejer_2Controller.4")); //$NON-NLS-1$
+					alert.setContentText(Messages.getString("Ejer_2Controller.5")); //$NON-NLS-1$
 					alert.showAndWait();
 				}
 				else {
 					personas.add(p);
-					txtNombre.setText("");
-					txtApellidos.setText("");
-					txtEdad.setText("");
+					txtNombre.setText(Messages.getString("Ejer_2Controller.6")); //$NON-NLS-1$
+					txtApellidos.setText(Messages.getString("Ejer_2Controller.7")); //$NON-NLS-1$
+					txtEdad.setText(Messages.getString("Ejer_2Controller.8")); //$NON-NLS-1$
 				}	
 			}
 			// Comprobar que la persona a introducir no exista ya
@@ -91,8 +92,8 @@ public class Ejer_2Controller implements Initializable{
 				Alert alert = new Alert(Alert.AlertType.ERROR);
 				alert.initOwner(this.btnAgregar.getScene().getWindow());
 				alert.setHeaderText(null);
-				alert.setTitle("Error");
-				alert.setContentText("Esa persona ya existe");
+				alert.setTitle(Messages.getString("Ejer_2Controller.9")); //$NON-NLS-1$
+				alert.setContentText(Messages.getString("Ejer_2Controller.10")); //$NON-NLS-1$
 				alert.showAndWait();
 			}
 			//Asegurarse de que la edad es un entero
@@ -100,8 +101,8 @@ public class Ejer_2Controller implements Initializable{
 			Alert alert = new Alert(Alert.AlertType.ERROR);
 			alert.initOwner(this.btnAgregar.getScene().getWindow());
 			alert.setHeaderText(null);
-			alert.setTitle("Error");
-			alert.setContentText("La edad tiene que ser un entero");
+			alert.setTitle(Messages.getString("Ejer_2Controller.11")); //$NON-NLS-1$
+			alert.setContentText(Messages.getString("Ejer_2Controller.12")); //$NON-NLS-1$
 			alert.showAndWait();
 		}
 
@@ -111,8 +112,8 @@ public class Ejer_2Controller implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		personas = FXCollections.observableArrayList();
 		tablaDatos.setItems(personas);
-		columNombre.setCellValueFactory(new PropertyValueFactory<Persona, String>("nombre"));
-		columApellido.setCellValueFactory(new PropertyValueFactory<Persona, String>("apellido"));
-		columEdad.setCellValueFactory(new PropertyValueFactory<Persona, Integer>("edad"));
+		columNombre.setCellValueFactory(new PropertyValueFactory<Persona, String>(Messages.getString("Ejer_2Controller.13"))); //$NON-NLS-1$
+		columApellido.setCellValueFactory(new PropertyValueFactory<Persona, String>(Messages.getString("Ejer_2Controller.14"))); //$NON-NLS-1$
+		columEdad.setCellValueFactory(new PropertyValueFactory<Persona, Integer>(Messages.getString("Ejer_2Controller.15"))); //$NON-NLS-1$
 	}
 }
