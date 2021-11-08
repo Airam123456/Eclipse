@@ -27,7 +27,7 @@
 	</rowConstraints>
 	<children>
 		<Button fx:id="btnAgregar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#agregrar" prefHeight="25.0" prefWidth="136.0" text="Agregar Persona" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-		<TableView fx:id="tablaDatos" onMouseClicked="#extraerDatos" prefHeight="314.0" prefWidth="404.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="8" GridPane.vgrow="ALWAYS">
+		<TableView fx:id="tablaDatos" prefHeight="314.0" prefWidth="404.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="8" GridPane.vgrow="ALWAYS">
 			<columns>
 				<TableColumn fx:id="columNombre" prefWidth="122.0" text="NOMBRE" />
 				<TableColumn fx:id="columApellido" prefWidth="150.0" text="APELLIDOS" />
