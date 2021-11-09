@@ -99,6 +99,7 @@ public class Ejer_5Controller implements Initializable{
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Ejer_5_IngresarDatos.fxml"));
 			Parent root = loader.load();
 			Ejer_5_IngresarDatosController controller = loader.getController();
+			controller.setPersona(p);
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
 			stage.initModality(Modality.APPLICATION_MODAL);
@@ -111,6 +112,9 @@ public class Ejer_5Controller implements Initializable{
 			if (!personas.contains(p)) {
 				personas.set(posicion, p);
 			}
+			
+			btnModificar.setDisable(true);
+			btnEliminar.setDisable(true);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
