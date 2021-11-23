@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane prefHeight="325.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ejer_1Controller">
+<GridPane prefHeight="325.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UbicacionesController">
 	<columnConstraints>
 		<ColumnConstraints maxWidth="214.0" minWidth="170.0" prefWidth="207.0" />
 		<ColumnConstraints maxWidth="214.0" minWidth="30.0" prefWidth="45.0" />
