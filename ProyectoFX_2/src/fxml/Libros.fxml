@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Libros_Controller">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrosController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="275.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.0" minWidth="10.0" prefWidth="500.0" />
@@ -31,10 +31,10 @@
    <children>
       <TableView fx:id="tablaLibros" prefHeight="133.0" prefWidth="528.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
         <columns>
-          <TableColumn prefWidth="237.0" text="Titulo" />
-          <TableColumn prefWidth="173.0" text="Autor" />
-            <TableColumn prefWidth="148.0" text="Editorial" />
-            <TableColumn prefWidth="104.0" text="Estado" />
+          <TableColumn fx:id="columTitulo" prefWidth="237.0" text="Titulo" />
+          <TableColumn fx:id="columAutor" prefWidth="173.0" text="Autor" />
+            <TableColumn fx:id="columEditorial" minWidth="0.0" prefWidth="120.0" text="Editorial" />
+            <TableColumn fx:id="columEstado" prefWidth="132.0" text="Estado" />
         </columns>
          <GridPane.margin>
             <Insets left="20.0" top="20.0" />
