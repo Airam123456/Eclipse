@@ -6,12 +6,11 @@ public class Libro {
 	private int codigo, baja;
 	
 	public Libro(int codigo, String titulo, String autor, String editorial, String estado, int baja) {
-		super();
+		this.codigo = codigo;
 		this.titulo = titulo;
 		this.autor = autor;
 		this.editorial = editorial;
 		this.estado = estado;
-		this.codigo = codigo;
 		this.baja = baja;
 	}
 

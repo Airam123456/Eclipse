@@ -26,11 +26,25 @@ public class LibrosDAO {
 				lstLibro.add(new Libro(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6)));
 			}
 		}catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			System.out.println("Fallo al obtener los datos");
 		}
 		return lstLibro;
+	}
+	
+	public int selectCodigo() {
+		PreparedStatement ps;
+		int codigo = 0;
+		
+		try {
+			ps = cn.getConexion().prepareStatement("select MAX(codigo) from Libro;");
+			ResultSet rs = ps.executeQuery();
+			codigo = rs.getInt(1);
+			
+		}catch (Exception e) {
+			System.out.println();
+		}
+		return codigo;
 	}
 	
 	public void insertLibro (Libro libro) {
@@ -48,7 +62,6 @@ public class LibrosDAO {
 			ps.executeUpdate();
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Error al insertar datos");
 		}

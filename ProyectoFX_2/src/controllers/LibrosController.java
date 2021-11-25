@@ -132,6 +132,7 @@ public class LibrosController implements Initializable{
 			stage.setTitle("Nuevo Libro");
 			stage.showAndWait();
 			l = controller.getLibro();
+			/*
 			if (!dataLibro.contains(l)) {
 				dataLibro.add(l);
 			}
@@ -143,6 +144,7 @@ public class LibrosController implements Initializable{
 				alert.setContentText("Esa persona ya existe");
 				alert.showAndWait();
 			}
+			*/
 		} catch (IOException e) {
 			e.printStackTrace();
 			Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -178,5 +180,6 @@ public class LibrosController implements Initializable{
 		
 		cargarDatos();
 		filtro();
+		
 	}
 }

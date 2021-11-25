@@ -46,8 +46,8 @@
             <Insets left="20.0" />
          </GridPane.margin>
       </Label>
-      <Button fx:id="btnGuardarLibro" mnemonicParsing="false" onAction="#guardarAlum" text="Guardar" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
-      <Button fx:id="btnCancelarLibro" mnemonicParsing="false" onAction="#cancelarAlum" text="Cancelar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+      <Button fx:id="btnGuardarLibro" mnemonicParsing="false" onAction="#guardarLibro" text="Guardar" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+      <Button fx:id="btnCancelarLibro" mnemonicParsing="false" onAction="#cancelarLibro" text="Cancelar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
       <TextField fx:id="txtAutor" prefHeight="24.0" prefWidth="228.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets left="20.0" right="20.0" />
@@ -63,7 +63,7 @@
             <Insets left="20.0" right="20.0" />
          </GridPane.margin>
       </TextField>
-      <ComboBox prefHeight="24.0" prefWidth="289.0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+      <ComboBox fx:id="cmbEstado" prefHeight="24.0" prefWidth="289.0" GridPane.columnSpan="2" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets left="20.0" right="20.0" />
          </GridPane.margin>
