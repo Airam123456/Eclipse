@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>Paises</name><driver>com.mysql.jdbc.Driver</driver><username>admin</username><password>password</password><savePassword>true</savePassword><url>jdbc:mysql://localhost/paises</url><database></database><serverAddress></serverAddress><classpath>/home/dm2/Escritorio/Eclipse/Formulario1/lib/mysql-connector-java-8.0.19.jar</classpath></jdbcDataAdapter>
