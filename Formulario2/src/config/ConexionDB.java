@@ -13,7 +13,7 @@ public class ConexionDB {
     public static Connection getConexion() {
     	try {
     		String host = "localhost";
-    		String baseDatos = "paises";
+    		String baseDatos = "agenda";
     		String usuario = "admin";
     		String password = "password";
     		String cadenaConexion = "jdbc:mysql://" + host + "/" + baseDatos+ "?serverTimezone=" + TimeZone.getDefault().getID();

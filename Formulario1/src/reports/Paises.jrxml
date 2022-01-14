@@ -132,11 +132,11 @@
 					<textFieldExpression><![CDATA[$F{capital}]]></textFieldExpression>
 				</textField>
 				<textField textAdjust="StretchHeight">
-					<reportElement style="Detail" x="414" y="0" width="138" height="15" uuid="c1f84716-5981-4d5b-96dc-d76952f295d5">
+					<reportElement style="Row" x="414" y="0" width="138" height="15" uuid="c1f84716-5981-4d5b-96dc-d76952f295d5">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b50e5a5c-c6ff-48fe-8e10-4e65393861d3"/>
 					</reportElement>
 					<textElement textAlignment="Right"/>
-					<textFieldExpression><![CDATA[$F{num_habitantes}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{num_habitantes} != null ? $F{num_habitantes}: "Sin Datos")]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>

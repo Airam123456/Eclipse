@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subinforme_emails" pageWidth="250" pageHeight="842" columnWidth="250" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="094b02fc-a11f-48cf-9759-3646d41ed33a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="agenda"/>
+	<parameter name="DNI_PER" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT email
+FROM agenda.email WHERE dni = $P{DNI_PER}]]>
+	</queryString>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="email"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="60" y="10" width="100" height="30" forecolor="#3388DE" uuid="27b10409-53c6-49e8-ad2f-c4a34d55a84d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="202" height="20" uuid="fcfc2e50-81e5-45ea-a441-ef4d552c7108"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="220" height="1" uuid="e1d2e385-c8f0-4a53-9fab-0829b2f4acbf"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
