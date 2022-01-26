@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="556.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controllers.Prestamos_Controller">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Prestamos_Controller">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
@@ -23,9 +23,9 @@
    <children>
       <TableView fx:id="tablaPrestamo" prefHeight="185.0" prefWidth="401.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
         <columns>
-          <TableColumn prefWidth="151.0" text="Nombre Alumno" />
-          <TableColumn prefWidth="186.0" text="Titulo Libro" />
-            <TableColumn prefWidth="178.0" text="Fecha Prestamo" />
+          <TableColumn fx:id="columNombreAlumno" prefWidth="151.0" text="Nombre Alumno" />
+          <TableColumn fx:id="columTituloLibro" prefWidth="186.0" text="Titulo Libro" />
+            <TableColumn fx:id="columFechaPrestamo" prefWidth="178.0" text="Fecha Prestamo" />
         </columns>
          <GridPane.margin>
             <Insets left="20.0" right="20.0" />

@@ -8,7 +8,6 @@ import java.util.TimeZone;
 public class ConexionDB {
 	private static Connection conexion;
 
-
     public ConexionDB() {}
 
     public static Connection getConexion() {

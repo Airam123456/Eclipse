@@ -14,7 +14,7 @@ import javafx.scene.control.TableView;
 
 import javafx.scene.control.TableColumn;
 
-public class LibrosController {
+public class MainController {
 	@FXML
 	private TableView tablaLibros;
 	@FXML

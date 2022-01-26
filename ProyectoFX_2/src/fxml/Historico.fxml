@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controllers.Historico_Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane prefHeight="439.0" prefWidth="728.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.0" minWidth="10.0" prefWidth="365.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.0" minWidth="10.0" prefWidth="363.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="163.0" minHeight="0.0" prefHeight="119.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="339.0" minHeight="10.0" prefHeight="339.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="cmbAlumnos" onAction="#filtrarAlumnos" prefHeight="24.0" prefWidth="234.0" promptText="Alumnos" GridPane.halignment="CENTER" />
+            <ComboBox fx:id="cmbLibro" onAction="#filtrarLibros" prefHeight="24.0" prefWidth="234.0" promptText="Libros" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <GridPane prefHeight="64.0" prefWidth="426.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="179.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0" prefWidth="312.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="234.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Buscar Prestamo: " GridPane.halignment="RIGHT" />
+                  <TextField fx:id="txtBuscarHistorico" prefHeight="24.0" prefWidth="374.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+            <TableView prefHeight="392.0" prefWidth="370.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn fx:id="columIDHistorico" prefWidth="69.0" text="ID" />
+                <TableColumn fx:id="columDNIHistorico" minWidth="0.0" prefWidth="122.0" text="DNI" />
+                  <TableColumn fx:id="columCODHistorico" prefWidth="149.0" text="CODIGO LIBRO" />
+                  <TableColumn fx:id="columFechaPrestamoHistorico" prefWidth="169.0" text="FEHCA PRESTAMO" />
+                  <TableColumn fx:id="columFechaDevolHistorico" prefWidth="178.0" text="FECHA DEVOLUCION" />
+              </columns>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TableView>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

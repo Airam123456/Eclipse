@@ -20,9 +20,22 @@ public class ConexionDB {
     		conexion = DriverManager.getConnection(cadenaConexion, usuario, password);
     		conexion.setAutoCommit(true);
     	} catch (SQLException e) {
-			e.printStackTrace();
+    		System.out.println("ConexionDB.SQLException: "+e);
 		}
         return conexion;
     }
     
+    public void cerrarConexion () {
+    	try {
+			this.conexion.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    public static void main(String[] args) {
+		ConexionDB gbd=new ConexionDB();
+		gbd.getConexion();
+	}
 }
