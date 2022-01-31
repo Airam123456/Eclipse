@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import config.ConexionDB;
 import modelo.Libro;
 
-public class LibrosDAO {
+public class LibroDAO {
 	
 	private ConexionDB cn;
 	
-	public LibrosDAO() {
+	public LibroDAO() {
 		this.cn = new ConexionDB();
 	}
 	
@@ -33,7 +33,7 @@ public class LibrosDAO {
 		return lstLibro;
 	}
 	
-	public Libro selectLibroPorCod (int codigo) {
+	public Libro selectLibroPorCodigo (int codigo) {
 		PreparedStatement ps;
 		Libro l= null;
 		try {
@@ -49,6 +49,7 @@ public class LibrosDAO {
 		}
 		return l;		
 	}
+	
 	
 	public boolean existeLibro (Libro l) {
 		PreparedStatement ps;
@@ -66,45 +67,59 @@ public class LibrosDAO {
 		return false;
 	}
 	
+	
 	public void insertLibro (Libro libro) throws SQLException {
 		PreparedStatement ps;
 
-		ps = cn.getConexion().prepareStatement("insert into Libro (codigo, titulo, autor, editorial, estado, baja) values (?,?,?,?,?,?)");
-		ps.setInt(1, libro.getCodigo());
-		ps.setString(2, libro.getTitulo());
-		ps.setString(3, libro.getAutor());
-		ps.setString(4, libro.getEditorial());
-		ps.setString(5, libro.getEstado());
-		ps.setInt(6, libro.getBaja());		
-		ps.executeUpdate();			
+		try {
+			ps = cn.getConexion().prepareStatement("insert into Libro (codigo, titulo, autor, editorial, estado, baja) values (?,?,?,?,?,?)");
+			ps.setInt(1, libro.getCodigo());
+			ps.setString(2, libro.getTitulo());
+			ps.setString(3, libro.getAutor());
+			ps.setString(4, libro.getEditorial());
+			ps.setString(5, libro.getEstado());
+			ps.setInt(6, libro.getBaja());		
+			ps.executeUpdate();	
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Error al insertar datos");
+		}
 	}
+	
 	
 	public void updateLibro (Libro libro, int cod) throws SQLException {
 		PreparedStatement ps;	
 		
-		ps = cn.getConexion().prepareStatement("update Libro set codigo = ?, titulo = ?, autor = ?, editorial = ?, estado = ? where codigo = ? ");
-		ps.setInt(1, libro.getCodigo());
-		ps.setString(2, libro.getTitulo());
-		ps.setString(3, libro.getAutor());
-		ps.setString(4, libro.getEditorial());
-		ps.setString(5, libro.getEstado());
-		ps.setInt(6, cod);
-		ps.executeUpdate();
+		try {
+			ps = cn.getConexion().prepareStatement("update Libro set codigo = ?, titulo = ?, autor = ?, editorial = ?, estado = ? where codigo = ? ");
+			ps.setInt(1, libro.getCodigo());
+			ps.setString(2, libro.getTitulo());
+			ps.setString(3, libro.getAutor());
+			ps.setString(4, libro.getEditorial());
+			ps.setString(5, libro.getEstado());
+			ps.setInt(6, cod);
+			ps.executeUpdate();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Error al actualizar datos");		}
+
 	}
 	
-	public void cambiarBaja (Libro lib) {
+	public void cambiarBaja (Libro libro) {
 		PreparedStatement ps;
 		
-		if (lib.getBaja() == 0) {
-			lib.setBaja(1); 
+		if (libro.getBaja() == 0) {
+			libro.setBaja(1); 
 		}else {
-			lib.setBaja(0);
+			libro.setBaja(0);
 		}
 		
 		try {
 			ps = cn.getConexion().prepareStatement("update Libro set Baja = ? where codigo = ?");
-			ps.setInt(1, lib.getBaja());
-			ps.setInt(2, lib.getCodigo());
+			ps.setInt(1, libro.getBaja());
+			ps.setInt(2, libro.getCodigo());
 			
 			ps.executeUpdate();
 		} catch (SQLException e) {
@@ -127,41 +142,4 @@ public class LibrosDAO {
 			e.printStackTrace();
 		}
 	}
-	
-//	public int selectCodigo() {
-//		PreparedStatement ps;
-//		int codigo = 0;
-//		
-//		try {
-//			ps = cn.getConexion().prepareStatement("select MAX(codigo) from Libro;");
-//			ResultSet rs = ps.executeQuery();
-//			codigo = rs.getInt(1);
-//			
-//		}catch (Exception e) {
-//			System.out.println();
-//		}
-//		return codigo;
-//	}
-//	
-//	public void insertLibro (Libro libro) {
-//		PreparedStatement ps;
-//		
-//		try {
-//			ps = cn.getConexion().prepareStatement("insert into Libro (codigo, Titulo, Autor, Editorial, Estado, Baja) values (?,?,?,?,?,?)");
-//			ps.setInt(1, libro.getCodigo());
-//			ps.setString(2, libro.getTitulo());
-//			ps.setString(3, libro.getAutor());
-//			ps.setString(4, libro.getEditorial());
-//			ps.setString(5, libro.getEstado());
-//			ps.setInt(6, libro.getBaja());
-//			
-//			ps.executeUpdate();
-//			
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("Error al insertar datos");
-//		}
-//	} 
-//	
-
 }

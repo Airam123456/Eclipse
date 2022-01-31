@@ -12,7 +12,7 @@ import modelo.Libro;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import dao.LibrosDAO;
+import dao.LibroDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -35,7 +35,7 @@ public class Libros_IngresarDatos_Controller implements Initializable{
 	
 	private ObservableList<String> items;
 	
-	private LibrosDAO librosDAO;
+	private LibroDAO librosDAO;
 	
 
 	// Event Listener on Button[#btnGuardarLibro].onAction
